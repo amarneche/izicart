@@ -2,12 +2,15 @@
 
 declare(strict_types=1);
 
-use Stancl\Tenancy\Database\Models\Domain;
-use Stancl\Tenancy\Database\Models\Tenant;
+use Stancl\Tenancy\Database\Models\Domain as BaseDomain;
+use Stancl\Tenancy\Database\Models\Tenant as BaseTenant;
+use App\Models\Domain;
+use App\Models\Tenant;
+
 
 return [
     'tenant_model' => Tenant::class,
-    'id_generator' => Stancl\Tenancy\UUIDGenerator::class,
+    'id_generator' => null,
 
     'domain_model' => Domain::class,
 
@@ -16,9 +19,8 @@ return [
      *
      * Only relevant if you're using the domain or subdomain identification middleware.
      */
-    'central_domains' => [
-        '127.0.0.1',
-        'localhost',
+    'central_domains' => [        
+        env('CENTRAL_DOMAIN','localhost')
     ],
 
     /**
@@ -52,7 +54,7 @@ return [
          * prefix + tenant_id + suffix.
          */
         'prefix' => 'tenant',
-        'suffix' => '',
+        'suffix' => '_izicart',
 
         /**
          * TenantDatabaseManagers are classes that handle the creation & deletion of tenant databases.
@@ -165,7 +167,7 @@ return [
     'features' => [
         // Stancl\Tenancy\Features\UserImpersonation::class,
         // Stancl\Tenancy\Features\TelescopeTags::class,
-        // Stancl\Tenancy\Features\UniversalRoutes::class,
+        Stancl\Tenancy\Features\UniversalRoutes::class,
         // Stancl\Tenancy\Features\TenantConfig::class, // https://tenancyforlaravel.com/docs/v3/features/tenant-config
         // Stancl\Tenancy\Features\CrossDomainRedirect::class, // https://tenancyforlaravel.com/docs/v3/features/cross-domain-redirect
     ],

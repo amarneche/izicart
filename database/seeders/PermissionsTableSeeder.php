@@ -76,298 +76,602 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 17,
-                'title' => 'basic_c_r_m_access',
+                'title' => 'product_create',
             ],
             [
                 'id'    => 18,
-                'title' => 'crm_status_create',
+                'title' => 'product_edit',
             ],
             [
                 'id'    => 19,
-                'title' => 'crm_status_edit',
+                'title' => 'product_show',
             ],
             [
                 'id'    => 20,
-                'title' => 'crm_status_show',
+                'title' => 'product_delete',
             ],
             [
                 'id'    => 21,
-                'title' => 'crm_status_delete',
+                'title' => 'product_access',
             ],
             [
                 'id'    => 22,
-                'title' => 'crm_status_access',
+                'title' => 'color_attribute_create',
             ],
             [
                 'id'    => 23,
-                'title' => 'crm_customer_create',
+                'title' => 'color_attribute_edit',
             ],
             [
                 'id'    => 24,
-                'title' => 'crm_customer_edit',
+                'title' => 'color_attribute_show',
             ],
             [
                 'id'    => 25,
-                'title' => 'crm_customer_show',
+                'title' => 'color_attribute_delete',
             ],
             [
                 'id'    => 26,
-                'title' => 'crm_customer_delete',
+                'title' => 'color_attribute_access',
             ],
             [
                 'id'    => 27,
-                'title' => 'crm_customer_access',
+                'title' => 'size_attribute_create',
             ],
             [
                 'id'    => 28,
-                'title' => 'crm_note_create',
+                'title' => 'size_attribute_edit',
             ],
             [
                 'id'    => 29,
-                'title' => 'crm_note_edit',
+                'title' => 'size_attribute_show',
             ],
             [
                 'id'    => 30,
-                'title' => 'crm_note_show',
+                'title' => 'size_attribute_delete',
             ],
             [
                 'id'    => 31,
-                'title' => 'crm_note_delete',
+                'title' => 'size_attribute_access',
             ],
             [
                 'id'    => 32,
-                'title' => 'crm_note_access',
+                'title' => 'variation_attribute_create',
             ],
             [
                 'id'    => 33,
-                'title' => 'crm_document_create',
+                'title' => 'variation_attribute_edit',
             ],
             [
                 'id'    => 34,
-                'title' => 'crm_document_edit',
+                'title' => 'variation_attribute_show',
             ],
             [
                 'id'    => 35,
-                'title' => 'crm_document_show',
+                'title' => 'variation_attribute_delete',
             ],
             [
                 'id'    => 36,
-                'title' => 'crm_document_delete',
+                'title' => 'variation_attribute_access',
             ],
             [
                 'id'    => 37,
-                'title' => 'crm_document_access',
+                'title' => 'product_management_access',
             ],
             [
                 'id'    => 38,
-                'title' => 'task_management_access',
+                'title' => 'category_create',
             ],
             [
                 'id'    => 39,
-                'title' => 'task_status_create',
+                'title' => 'category_edit',
             ],
             [
                 'id'    => 40,
-                'title' => 'task_status_edit',
+                'title' => 'category_show',
             ],
             [
                 'id'    => 41,
-                'title' => 'task_status_show',
+                'title' => 'category_delete',
             ],
             [
                 'id'    => 42,
-                'title' => 'task_status_delete',
+                'title' => 'category_access',
             ],
             [
                 'id'    => 43,
-                'title' => 'task_status_access',
+                'title' => 'store_setting_access',
             ],
             [
                 'id'    => 44,
-                'title' => 'task_tag_create',
+                'title' => 'delivery_access',
             ],
             [
                 'id'    => 45,
-                'title' => 'task_tag_edit',
+                'title' => 'wilaya_create',
             ],
             [
                 'id'    => 46,
-                'title' => 'task_tag_show',
+                'title' => 'wilaya_edit',
             ],
             [
                 'id'    => 47,
-                'title' => 'task_tag_delete',
+                'title' => 'wilaya_show',
             ],
             [
                 'id'    => 48,
-                'title' => 'task_tag_access',
+                'title' => 'wilaya_delete',
             ],
             [
                 'id'    => 49,
-                'title' => 'task_create',
+                'title' => 'wilaya_access',
             ],
             [
                 'id'    => 50,
-                'title' => 'task_edit',
+                'title' => 'commune_create',
             ],
             [
                 'id'    => 51,
-                'title' => 'task_show',
+                'title' => 'commune_edit',
             ],
             [
                 'id'    => 52,
-                'title' => 'task_delete',
+                'title' => 'commune_show',
             ],
             [
                 'id'    => 53,
-                'title' => 'task_access',
+                'title' => 'commune_delete',
             ],
             [
                 'id'    => 54,
-                'title' => 'tasks_calendar_access',
+                'title' => 'commune_access',
             ],
             [
                 'id'    => 55,
-                'title' => 'feature_create',
+                'title' => 'delivery_company_create',
             ],
             [
                 'id'    => 56,
-                'title' => 'feature_edit',
+                'title' => 'delivery_company_edit',
             ],
             [
                 'id'    => 57,
-                'title' => 'feature_show',
+                'title' => 'delivery_company_show',
             ],
             [
                 'id'    => 58,
-                'title' => 'feature_delete',
+                'title' => 'delivery_company_delete',
             ],
             [
                 'id'    => 59,
-                'title' => 'feature_access',
+                'title' => 'delivery_company_access',
             ],
             [
                 'id'    => 60,
-                'title' => 'package_create',
+                'title' => 'payment_method_create',
             ],
             [
                 'id'    => 61,
-                'title' => 'package_edit',
+                'title' => 'payment_method_edit',
             ],
             [
                 'id'    => 62,
-                'title' => 'package_show',
+                'title' => 'payment_method_show',
             ],
             [
                 'id'    => 63,
-                'title' => 'package_delete',
+                'title' => 'payment_method_delete',
             ],
             [
                 'id'    => 64,
-                'title' => 'package_access',
+                'title' => 'payment_method_access',
             ],
             [
                 'id'    => 65,
-                'title' => 'tenant_create',
+                'title' => 'sales_management_access',
             ],
             [
                 'id'    => 66,
-                'title' => 'tenant_edit',
+                'title' => 'customer_create',
             ],
             [
                 'id'    => 67,
-                'title' => 'tenant_show',
+                'title' => 'customer_edit',
             ],
             [
                 'id'    => 68,
-                'title' => 'tenant_delete',
+                'title' => 'customer_show',
             ],
             [
                 'id'    => 69,
-                'title' => 'tenant_access',
+                'title' => 'customer_delete',
             ],
             [
                 'id'    => 70,
-                'title' => 'domain_create',
+                'title' => 'customer_access',
             ],
             [
                 'id'    => 71,
-                'title' => 'domain_edit',
+                'title' => 'order_create',
             ],
             [
                 'id'    => 72,
-                'title' => 'domain_show',
+                'title' => 'order_edit',
             ],
             [
                 'id'    => 73,
-                'title' => 'domain_delete',
+                'title' => 'order_show',
             ],
             [
                 'id'    => 74,
-                'title' => 'domain_access',
+                'title' => 'order_delete',
             ],
             [
                 'id'    => 75,
-                'title' => 'setting_create',
+                'title' => 'order_access',
             ],
             [
                 'id'    => 76,
-                'title' => 'setting_edit',
+                'title' => 'marketing_access',
             ],
             [
                 'id'    => 77,
-                'title' => 'setting_show',
+                'title' => 'coupon_create',
             ],
             [
                 'id'    => 78,
-                'title' => 'setting_delete',
+                'title' => 'coupon_edit',
             ],
             [
                 'id'    => 79,
-                'title' => 'setting_access',
+                'title' => 'coupon_show',
             ],
             [
                 'id'    => 80,
-                'title' => 'payment_create',
+                'title' => 'coupon_delete',
             ],
             [
                 'id'    => 81,
-                'title' => 'payment_edit',
+                'title' => 'coupon_access',
             ],
             [
                 'id'    => 82,
-                'title' => 'payment_show',
+                'title' => 'order_item_create',
             ],
             [
                 'id'    => 83,
-                'title' => 'payment_delete',
+                'title' => 'order_item_edit',
             ],
             [
                 'id'    => 84,
-                'title' => 'payment_access',
+                'title' => 'order_item_show',
             ],
             [
                 'id'    => 85,
-                'title' => 'theme_create',
+                'title' => 'order_item_delete',
             ],
             [
                 'id'    => 86,
-                'title' => 'theme_edit',
+                'title' => 'order_item_access',
             ],
             [
                 'id'    => 87,
-                'title' => 'theme_show',
+                'title' => 'cart_create',
             ],
             [
                 'id'    => 88,
-                'title' => 'theme_delete',
+                'title' => 'cart_edit',
             ],
             [
                 'id'    => 89,
-                'title' => 'theme_access',
+                'title' => 'cart_show',
             ],
             [
                 'id'    => 90,
+                'title' => 'cart_delete',
+            ],
+            [
+                'id'    => 91,
+                'title' => 'cart_access',
+            ],
+            [
+                'id'    => 92,
+                'title' => 'cart_item_create',
+            ],
+            [
+                'id'    => 93,
+                'title' => 'cart_item_edit',
+            ],
+            [
+                'id'    => 94,
+                'title' => 'cart_item_show',
+            ],
+            [
+                'id'    => 95,
+                'title' => 'cart_item_delete',
+            ],
+            [
+                'id'    => 96,
+                'title' => 'cart_item_access',
+            ],
+            [
+                'id'    => 97,
+                'title' => 'appearence_access',
+            ],
+            [
+                'id'    => 98,
+                'title' => 'page_create',
+            ],
+            [
+                'id'    => 99,
+                'title' => 'page_edit',
+            ],
+            [
+                'id'    => 100,
+                'title' => 'page_show',
+            ],
+            [
+                'id'    => 101,
+                'title' => 'page_delete',
+            ],
+            [
+                'id'    => 102,
+                'title' => 'page_access',
+            ],
+            [
+                'id'    => 103,
+                'title' => 'menu_create',
+            ],
+            [
+                'id'    => 104,
+                'title' => 'menu_edit',
+            ],
+            [
+                'id'    => 105,
+                'title' => 'menu_show',
+            ],
+            [
+                'id'    => 106,
+                'title' => 'menu_delete',
+            ],
+            [
+                'id'    => 107,
+                'title' => 'menu_access',
+            ],
+            [
+                'id'    => 108,
+                'title' => 'menu_item_create',
+            ],
+            [
+                'id'    => 109,
+                'title' => 'menu_item_edit',
+            ],
+            [
+                'id'    => 110,
+                'title' => 'menu_item_show',
+            ],
+            [
+                'id'    => 111,
+                'title' => 'menu_item_delete',
+            ],
+            [
+                'id'    => 112,
+                'title' => 'menu_item_access',
+            ],
+            [
+                'id'    => 113,
+                'title' => 'task_management_access',
+            ],
+            [
+                'id'    => 114,
+                'title' => 'task_status_create',
+            ],
+            [
+                'id'    => 115,
+                'title' => 'task_status_edit',
+            ],
+            [
+                'id'    => 116,
+                'title' => 'task_status_show',
+            ],
+            [
+                'id'    => 117,
+                'title' => 'task_status_delete',
+            ],
+            [
+                'id'    => 118,
+                'title' => 'task_status_access',
+            ],
+            [
+                'id'    => 119,
+                'title' => 'task_tag_create',
+            ],
+            [
+                'id'    => 120,
+                'title' => 'task_tag_edit',
+            ],
+            [
+                'id'    => 121,
+                'title' => 'task_tag_show',
+            ],
+            [
+                'id'    => 122,
+                'title' => 'task_tag_delete',
+            ],
+            [
+                'id'    => 123,
+                'title' => 'task_tag_access',
+            ],
+            [
+                'id'    => 124,
+                'title' => 'task_create',
+            ],
+            [
+                'id'    => 125,
+                'title' => 'task_edit',
+            ],
+            [
+                'id'    => 126,
+                'title' => 'task_show',
+            ],
+            [
+                'id'    => 127,
+                'title' => 'task_delete',
+            ],
+            [
+                'id'    => 128,
+                'title' => 'task_access',
+            ],
+            [
+                'id'    => 129,
+                'title' => 'tasks_calendar_access',
+            ],
+            [
+                'id'    => 130,
+                'title' => 'expense_management_access',
+            ],
+            [
+                'id'    => 131,
+                'title' => 'expense_category_create',
+            ],
+            [
+                'id'    => 132,
+                'title' => 'expense_category_edit',
+            ],
+            [
+                'id'    => 133,
+                'title' => 'expense_category_show',
+            ],
+            [
+                'id'    => 134,
+                'title' => 'expense_category_delete',
+            ],
+            [
+                'id'    => 135,
+                'title' => 'expense_category_access',
+            ],
+            [
+                'id'    => 136,
+                'title' => 'income_category_create',
+            ],
+            [
+                'id'    => 137,
+                'title' => 'income_category_edit',
+            ],
+            [
+                'id'    => 138,
+                'title' => 'income_category_show',
+            ],
+            [
+                'id'    => 139,
+                'title' => 'income_category_delete',
+            ],
+            [
+                'id'    => 140,
+                'title' => 'income_category_access',
+            ],
+            [
+                'id'    => 141,
+                'title' => 'expense_create',
+            ],
+            [
+                'id'    => 142,
+                'title' => 'expense_edit',
+            ],
+            [
+                'id'    => 143,
+                'title' => 'expense_show',
+            ],
+            [
+                'id'    => 144,
+                'title' => 'expense_delete',
+            ],
+            [
+                'id'    => 145,
+                'title' => 'expense_access',
+            ],
+            [
+                'id'    => 146,
+                'title' => 'income_create',
+            ],
+            [
+                'id'    => 147,
+                'title' => 'income_edit',
+            ],
+            [
+                'id'    => 148,
+                'title' => 'income_show',
+            ],
+            [
+                'id'    => 149,
+                'title' => 'income_delete',
+            ],
+            [
+                'id'    => 150,
+                'title' => 'income_access',
+            ],
+            [
+                'id'    => 151,
+                'title' => 'expense_report_create',
+            ],
+            [
+                'id'    => 152,
+                'title' => 'expense_report_edit',
+            ],
+            [
+                'id'    => 153,
+                'title' => 'expense_report_show',
+            ],
+            [
+                'id'    => 154,
+                'title' => 'expense_report_delete',
+            ],
+            [
+                'id'    => 155,
+                'title' => 'expense_report_access',
+            ],
+            [
+                'id'    => 156,
+                'title' => 'facebook_setting_create',
+            ],
+            [
+                'id'    => 157,
+                'title' => 'facebook_setting_edit',
+            ],
+            [
+                'id'    => 158,
+                'title' => 'facebook_setting_show',
+            ],
+            [
+                'id'    => 159,
+                'title' => 'facebook_setting_delete',
+            ],
+            [
+                'id'    => 160,
+                'title' => 'facebook_setting_access',
+            ],
+            [
+                'id'    => 161,
+                'title' => 'visual_identity_create',
+            ],
+            [
+                'id'    => 162,
+                'title' => 'visual_identity_edit',
+            ],
+            [
+                'id'    => 163,
+                'title' => 'visual_identity_show',
+            ],
+            [
+                'id'    => 164,
+                'title' => 'visual_identity_delete',
+            ],
+            [
+                'id'    => 165,
+                'title' => 'visual_identity_access',
+            ],
+            [
+                'id'    => 166,
                 'title' => 'profile_password_edit',
             ],
         ];

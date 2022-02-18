@@ -9,8 +9,9 @@ class CreateDomainsTable extends Migration
     public function up()
     {
         Schema::create('domains', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('domain')->unique();
+            $table->increments('id');
+            $table->string('domain', 255)->unique();
+
             $table->string('domain_type');
             $table->timestamps();
             $table->softDeletes();

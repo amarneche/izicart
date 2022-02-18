@@ -11,11 +11,19 @@ use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
-class Tenant extends Model implements HasMedia
+use Stancl\Tenancy\Database\Models\Tenant as BaseTenant;
+use Stancl\Tenancy\Contracts\TenantWithDatabase;
+use Stancl\Tenancy\Database\Concerns\HasDatabase;
+use Stancl\Tenancy\Database\Concerns\HasDomains;
+
+
+class Tenant extends BaseTenant implements HasMedia ,TenantWithDatabase
 {
     use SoftDeletes;
     use InteractsWithMedia;
     use HasFactory;
+    use HasDomains;
+    use HasDatabase;
 
     public $table = 'tenants';
 
@@ -43,7 +51,22 @@ class Tenant extends Model implements HasMedia
         'updated_at',
         'deleted_at',
     ];
-
+    // For tenancy purposes
+    public static function getCustomColumns(): array
+    {
+        return [
+        'id',
+        'store_name',
+        'store_logo',
+        'phone_number',
+        'email',
+        'is_active',
+        'valid_until',
+        'store_location',
+        'package_id',
+        'created_by_id',
+        ];
+        }
     public function registerMediaConversions(Media $media = null): void
     {
         $this->addMediaConversion('thumb')->fit('crop', 50, 50);
@@ -73,7 +96,7 @@ class Tenant extends Model implements HasMedia
             $file->thumbnail = $file->getUrl('thumb');
             $file->preview   = $file->getUrl('preview');
         }
-
+       
         return $file;
     }
 
