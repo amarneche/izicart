@@ -10,7 +10,7 @@ class CreateTenantsTable extends Migration
     public function up()
     {
         Schema::create('tenants', function (Blueprint $table) {
-            $table->id();
+            $table->string('id')->primary();
             // your custom columns may go here
             $table->string('store_name')->nullable();
             $table->string('phone_number')->nullable();
@@ -26,9 +26,12 @@ class CreateTenantsTable extends Migration
         });
     }
     public function down (){
+        
         Tenant::all()->each(function($tenant){
             $tenant->delete();
         });
+        Schema::dropIfExists('tenants');
+
         
     }
 }

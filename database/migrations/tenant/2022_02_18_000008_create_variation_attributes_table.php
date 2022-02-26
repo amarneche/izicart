@@ -11,6 +11,8 @@ class CreateVariationAttributesTable extends Migration
         Schema::create('variation_attributes', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('value');
+            $table->decimal('price', 15, 2);
+            $table->decimal('sale_price', 15, 2)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

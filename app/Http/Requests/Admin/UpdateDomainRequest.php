@@ -25,7 +25,7 @@ class UpdateDomainRequest extends FormRequest
             ],
             'tenant_id' => [
                 'required',
-                'integer',
+                
             ],
             'domain_type' => [
                 'required',

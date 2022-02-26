@@ -9,12 +9,14 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
+use App\Traits\Sluggify;
 
 class Product extends Model implements HasMedia
 {
     use SoftDeletes;
     use InteractsWithMedia;
     use HasFactory;
+    use Sluggify;
 
     public const STATUS_SELECT = [
         'draft'    => 'Draft',
@@ -54,6 +56,8 @@ class Product extends Model implements HasMedia
     {
         $this->addMediaConversion('thumb')->fit('crop', 50, 50);
         $this->addMediaConversion('preview')->fit('crop', 120, 120);
+        $this->addMediaConversion('shop')->fit('crop', 400, 400);
+        $this->addMediaConversion('featured')->fit('crop', 1080, 1080);
     }
 
     public function productCoupons()

@@ -1,5 +1,7 @@
 <?php
-use Stancl\Tenancy\Middleware\InitializeTenancyByDomainOrSubdomain;
+
+
+
 Route::redirect('/', '/login');
 Route::get('/home', function () {
     if (session('status')) {

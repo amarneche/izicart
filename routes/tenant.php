@@ -21,7 +21,7 @@ use Stancl\Tenancy\Middleware\PreventAccessFromCentralDomains;
 */
 
 
-
+//Public routes for clients 
 
 Route::middleware([
     'web',
@@ -35,11 +35,27 @@ Route::middleware([
 
 });
 
+Route::group(['middleware'=>['web',PreventAccessFromCentralDomains::class, InitializeTenancyByDomainOrSubdomain::class, ],
+        'as'=>'customer.','prefix'=>'','namespace'=>'App\Http\Controllers\Customer' ] ,function(){ 
+            Route::get('/','PageController@index')->name('homePage');
+            Route::get('/cart','PageController@showCartPage')->name('showCartPage');
+            Route::get('/checkout','PageController@showCheckoutPage')->name('showCheckoutPage');
+            Route::get('/thank-you','PageController@showThankyouPage')->name('showThankyouPage');
+            Route::get('/get-css','PageController@serveCSS')->name('serveCSS');
+
+            Route::post('/checkout','PageController@processCheckout')->name('processCheckout');
+
+            Route::get('/products','ProductController@index')->name('products.index');
+            Route::get('/products/{product}/','ProductController@show')->name('products.show');
+            Route::post('/products/{product}/','ProductController@quickOrder')->name('products.quickOrder');
+
+        } );
+
 
 Route::group(['middleware'=>['universal','web', InitializeTenancyByDomainOrSubdomain::class]] ,function (){
     Auth::routes(['register' => false]);
 } );
-
+ 
 
 
 

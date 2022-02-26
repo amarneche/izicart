@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Product;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -17,7 +18,7 @@ class CreateProductsTable extends Migration
             $table->string('short_description')->nullable();
             $table->longText('description')->nullable();
             $table->integer('stock_quantity')->nullable();
-            $table->string('status');
+            $table->string('status')->default(Product::STATUS_SELECT['draft']);
             $table->timestamps();
             $table->softDeletes();
         });

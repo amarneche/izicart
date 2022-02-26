@@ -13,6 +13,7 @@ class CreateCategoriesTable extends Migration
             $table->string('title');
             $table->string('slug')->nullable();
             $table->string('description')->nullable();
+            $table->foreignId('parent_category')->on('categories')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
