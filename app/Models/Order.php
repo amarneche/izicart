@@ -35,13 +35,14 @@ class Order extends Model
     protected $fillable = [
         'order_number',
         'customer_id',
-        'ship_to_wilaya_id',
-        'shipt_to_commune_id',
+        'wilaya_id',
+        'commune_id',
         'shipping_cost',
         'sub_total',
         'total',
         'status',
         'payment_method_id',
+        
         'created_at',
         'updated_at',
         'deleted_at',

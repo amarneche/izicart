@@ -6,6 +6,11 @@
     <main class="page product-page">
         <section class="clean-block clean-product dark">
             <div class="container">
+                <div class="block-heading">
+
+                    <h2 class="text-info">{{ __('Our Catalog') }}</h2>
+                    <p>{{ __('Catalog Page Description') }}</p>
+                </div>
 
                 <div class="block-content">
                     <div class="product-info">
@@ -28,11 +33,11 @@
                                 <div class="info">
                                     <h3>{{ $product->title }}</h3>
                                     <div class="rating">
-                                        <img src="{{global_asset("themes/clean/img/star.svg")}}">
-                                        <img src="{{global_asset("themes/clean/img/star.svg")}}">
-                                        <img src="{{global_asset("themes/clean/img/star.svg")}}">
-                                        <img src="{{global_asset("themes/clean/img/star.svg")}}">
-                                        <img src="{{global_asset("themes/clean/img/star.svg")}}">
+                                        <img src="{{ global_asset('themes/clean/img/star.svg') }}">
+                                        <img src="{{ global_asset('themes/clean/img/star.svg') }}">
+                                        <img src="{{ global_asset('themes/clean/img/star.svg') }}">
+                                        <img src="{{ global_asset('themes/clean/img/star.svg') }}">
+                                        <img src="{{ global_asset('themes/clean/img/star.svg') }}">
                                     </div>
                                     <div class="price">
                                         <h3>{{ $product->price }} DZD</h3>
@@ -51,13 +56,72 @@
                                             method="post">
                                             @csrf
                                             @method('post')
+
+                                            @if($product->colors->count() > 0)
+                                            <div class="col-md-12">
+                                                <div class="mb-3">
+                                                    <div class="form-group">
+                                                        <label for="">{{__('Choose Color')}}</label>
+                                                        <select class="form-control @error('color_id') is-invalid @enderror  " name="color_id" id="">
+                                                           @foreach($product->colors as $color)
+                                                                <option value="{{$color->id}}"> {{$color->value}} </option>
+                                                           @endforeach
+                                                        </select>
+                                                        @error('color_id')
+                                                       <span class="text-dangeer">  {{$message}}</span>
+
+                                                        @enderror
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            @endif
+                                            @if($product->sizes->count() > 0)
+                                            <div class="col-md-12">
+                                                <div class="mb-3">
+                                                    <div class="form-group">
+                                                        <label for="">{{__('Choose Size')}}</label>
+                                                        <select class="form-control  @error('size_id') is-invalid @enderror" name="size_id" id="">
+                                                           @foreach($product->sizes as $size)
+                                                                <option value="{{$size->id}}"> {{$size->value}} </option>
+                                                           @endforeach
+                                                        </select>
+                                                        @error('size_id')
+                                                        <span class="text-dangeer">  {{$message}}</span>
+ 
+                                                         @enderror
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            @endif
+                                            @if($product->variations->count() > 0)
+                                            <div class="col-md-12">
+                                                <div class="mb-3">
+                                                    <div class="form-group">
+                                                        <label for="">{{__('Choose variation')}}</label>
+                                                        <select class="form-control  @error('variation_id') is-invalid @enderror" name="variation_id" id="">
+                                                           @foreach($product->variations as $variation)
+                                                                <option value="{{$variation->id}}"> {{$variation->value}} </option>
+                                                           @endforeach
+                                                        </select>
+                                                        @error('variation_id')
+                                                        <span class="text-dangeer">  {{$message}}</span>
+ 
+                                                         @enderror
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            @endif
                                             <div class="col-md-12">
                                                 <div class="mb-3">
                                                     <div class="form-group">
                                                         <label for="">{{ __('Full name') }}</label>
-                                                        <input type="text" class="form-control" name="full_name" id=""
-                                                            aria-describedby="helpId" placeholder="">
-                                                        <span class="text-danger"></span>
+                                                        <input type="text"
+                                                            class="form-control @error('full_name') is-invalid @enderror "
+                                                            name="full_name" id="" aria-describedby="helpId" placeholder="">
+                                                        @error('full_name')
+                                                            <span class="text-danger">{{ $message }}</span>
+                                                        @enderror
+
                                                     </div>
                                                 </div>
 
@@ -68,7 +132,9 @@
                                                         <label for="">{{ __('Phone number') }}</label>
                                                         <input type="text" class="form-control" name="phone" id=""
                                                             aria-describedby="helpId" placeholder="">
-                                                        <span class="text-danger"></span>
+                                                        @error('phone')
+                                                            <span class="text-danger">{{ $message }}</span>
+                                                        @enderror
                                                     </div>
                                                 </div>
                                             </div>
@@ -81,6 +147,9 @@
                                                             <option></option>
                                                             <option></option>
                                                         </select>
+                                                        @error('wilaya_id')
+                                                            <span class="text-danger">{{ $message }}</span>
+                                                        @enderror
                                                     </div>
                                                 </div>
                                             </div>
@@ -93,9 +162,14 @@
                                                             <option></option>
                                                             <option></option>
                                                         </select>
+                                                        @error('commune_id')
+                                                            <span class="text-danger">{{ $message }}</span>
+                                                        @enderror
                                                     </div>
                                                 </div>
                                             </div>
+
+
                                             <div class="col-md-12">
                                                 <div class="mb-3">
 

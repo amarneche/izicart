@@ -32,6 +32,9 @@ class QuickOrderRequest extends FormRequest
             'wilaya_id'=>['nullable','exists:wilayas'],
             'commune_id'=>['nullable','exists:communes'],
             'quantity'=>['nullable','integer'],
+            'size_id'=>['nullable','exists:size_attributes,id'],
+            'color_id'=>['nullable','exists:color_attributes'], 
+            'variation_id'=>['nullable','exists:variation_attributes'],
         ];
     }
 }
